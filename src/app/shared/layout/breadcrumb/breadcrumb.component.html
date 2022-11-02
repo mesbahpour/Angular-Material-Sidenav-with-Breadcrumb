@@ -1,0 +1,9 @@
+  <nav>
+    <ul> 
+        <span *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item">
+            <li>Home ></li>
+            <li *ngIf="breadcrumbs[breadcrumbs.length-1].parent">{{ breadcrumbs[breadcrumbs.length-1].parent }} > </li>
+            <li>{{ breadcrumb.displayName }}</li>
+        </span>          
+    </ul>
+  </nav>
